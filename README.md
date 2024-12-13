@@ -1,3 +1,3 @@
-# FrozenBlock Multiloader Template
+# Particle Tweaks - Multiloader
 
-A MultiLoader template for FrozenBlock's mods.
+A MultiLoader port of Particle Tweaks.

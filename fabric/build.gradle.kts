@@ -39,10 +39,6 @@ val minecraft_version_range_fabric: String by project
 val neoforge_version: String by project
 val minecraft_version_range_neoforge: String by project
 
-val frozenlib_version: String by project
-val build_with_frozenlib: String by project
-val local_frozenlib = findProject(":FrozenLib-Multiloader") != null
-
 val cloth_config_version: String by project
 val modmenu_version: String by project
 
@@ -55,27 +51,6 @@ repositories {
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
     modApi("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}+$minecraft_version")
-
-    if (local_frozenlib) {
-        api(project(":FrozenLib-Multiloader", configuration = "namedElements"))
-    } else {
-        implementation("maven.modrinth:frozenlib:$frozenlib_version-fabric")
-    }
-
-    // TODO: [Treetrain1] Figure out how to allow for FLib to be included in builds
-    /*
-    if (local_frozenlib) {
-        if (build_with_frozenlib == "true") {
-            modCompileOnly(project(":FrozenLib-Multiloader"))?.let { include(it) }
-        }
-    } else {
-        if (build_with_frozenlib == "true") {
-            modApi("maven.modrinth:frozenlib:$frozenlib_version-fabric")?.let { include(it) }
-        } else {
-            modApi("maven.modrinth:frozenlib:$frozenlib_version-fabric")
-        }
-    }
-     */
 
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
         exclude(group = "net.fabricmc.fabric-api")

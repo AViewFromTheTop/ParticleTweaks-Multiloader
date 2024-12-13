@@ -13,15 +13,10 @@ authors = "${mod_author}"
 description = "${mod_description}"
 
 [mods.frozenlib.entrypoints]
-main = ["net.frozenblock.ml_template.neoforge.FrozenBlockMLTemplateNeoForge"]
-client = ["net.frozenblock.ml_template.neoforge.FrozenBlockMLTemplateNeoForgeClient"]
-server = ["net.frozenblock.ml_template.neoforge.FrozenBlockMLTemplateNeoForge"]
+client = ["net.lunade.particletweaks.neoforge.ParticleTweaksNeoForgeClient"]
 
 [[mixins]]
-config = "mixin/${mod_id}.mixins.json"
-
-[[mixins]]
-config = "${mod_id}.neoforge.mixins.json"
+config = "${mod_id}.mixins.json"
 
 [["dependencies.${mod_id}"]]
 modId = "neoforge"

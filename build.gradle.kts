@@ -32,10 +32,7 @@ val neoforge_version: String by project
 val neoforge_loader_version_range: String by project
 val minecraft_version_range_neoforge: String by project
 
-val frozenlib_version: String by project
-val build_with_frozenlib: String by project
-val local_frozenlib = findProject(":FrozenLib-Multiloader") != null
-
+val wilderwild_version: String by project
 val cloth_config_version: String by project
 val modmenu_version: String by project
 
@@ -94,13 +91,7 @@ subprojects {
 
         implementation("org.ow2.asm:asm-tree:9.7")
 
-        if (local_frozenlib) {
-            api(project(":FrozenLib-Multiloader", configuration = "namedElements"))
-        } else {
-            implementation("maven.modrinth:frozenlib:$frozenlib_version-fabric")
-        }
-
-        implementation("me.shedaniel.cloth:cloth-config-forge:${cloth_config_version}") {
+        implementation("me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}") {
             exclude(group = "net.fabricmc")
         }
     }
