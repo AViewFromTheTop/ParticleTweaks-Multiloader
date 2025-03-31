@@ -9,7 +9,7 @@
   ],
   "contact": {
     "homepage": "https://frozenblock.net",
-    "sources": "https://github.com/FrozenBlock/FrozenLib-ML"
+    "sources": "https://github.com/AViewFromTheTop/ParticleTweaks-Multiloader"
   },
   "license": "${mod_license}",
   "icon": "assets/${mod_id}/icon.png",
