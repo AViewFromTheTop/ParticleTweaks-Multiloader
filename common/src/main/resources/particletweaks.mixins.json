@@ -63,6 +63,7 @@
     "client.tweaks.wilderwild.MesogleaDripParticleMixin",
     "client.tweaks.wilderwild.MesogleaHangParticleMixin",
     "client.tweaks.wilderwild.MesogleaLandParticleMixin",
+    "client.tweaks.wilderwild.PaleFogParticleMixin",
     "client.tweaks.wilderwild.SeedParticleMixin"
   ],
   "injectors": {
